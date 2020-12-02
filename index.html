@@ -1,0 +1,114 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="index.css">
+    
+    <script>
+        function formSubmit(){
+            document.forms["myForm"].submit();
+        }
+    </script>
+
+</head>
+
+<body>
+    <div id="AboutYou">
+        <h1>About You</h1>
+        <h2>This is a Job application form. Please read and answer the questions carefully.</h2> 
+        <hr>
+     
+        <h2>Your motivation: Why do you want to work with us?<span>*</span></h2>
+        <textarea name="comment" cols="50" rows="5" form="userform" required></textarea><hr>
+
+        <h2>Your strengths: Why should our firm select you? <span>*</span></h2>
+        <textarea name="comment" cols="50" rows="5" form="userform" required></textarea>
+        <p>You can describe what makes you stand out in comparison to other candidates (skills, strengths, personality)</p><hr>
+
+        <h2>Your personal achievements: What are you proud of? <span>*</span></h2>
+        <textarea name="comment" cols="50" rows="5" form="userform" required></textarea>
+        <p>Please tell us about any personal or professional achievement you're proud of, any project or volunteering you've completed, etc.</p><hr>
+
+        <h2>Your learning: How have you recently improved your skills? (language / digital / other) <span>*</span></h2>
+        <textarea name="comment" cols="50" rows="5" form="userform" required></textarea>
+        <p>Please add links to any personal / community project you worked on, any courses you completed, etc.</p><hr>
+
+        <h2>Do you have any experience or skills in IT? If yes, please list them here. <span>*</span></h2>
+        <textarea name="comment" cols="50" rows="5" form="userform" required></textarea>
+        <p>Previous IT knowledge is not a requirement. Please add links to any completed IT courses, any website you built, your IT portfolio / blog, etc.</p><hr>
+
+
+        <h2>Your efforts: Which barriers do you currently face to get a job in Switzerland? <span>*</span></h2>
+        <textarea name="comment" cols="50" rows="5" form="userform" required></textarea>
+        <p>Please describe what efforts (job applications, scholarships) you have recently made to get a job / education in Switzerland. What prevents you from being integrated successfully in the job market?</p><hr>
+
+        <h2>How do you rate your language skills?<span>*</span></h2>
+
+        <hr>
+
+
+
+
+        <h2>If you completed any language certificates (in English, German, French), please indicate the level (A1, A2, B1, B2, C1, C2, mother tongue) <span>*</span></h2>
+        <textarea name="comment" cols="50" rows="5" form="userform" required></textarea>
+        <p>You can describe what makes you stand out in comparison to other candidates (skills, strengths, personality)</p><hr>
+
+
+        <h2>Please upload your CV in PDF format<span>*</span></h2>
+
+        <p>You find a link to your CV guideliness on our website</p><hr>
+
+    </div>
+
+    <div id="Data">
+
+
+        <h1>Personal Data</h1>
+
+        <form action="/action_page.php" method="get"></form>
+            <h2>First Name<span>*</span></h2>
+            <label for="fname"></label><br>
+            <input type="text" id="fname" name="fname" placeholder="maksimum two names"><br><br>
+            
+            <h2>Last Name<span>*</span></h2>
+            <label for="lname"></label><br>
+            <input type="text" id="lname" name="lname"><br><br>
+            
+            <h2>Email address<span>*</span> </h2>
+            <label for="email"></label><br>
+            <input type="email" id="email" name="email address" required><br>
+            <input type="email" id="email" name="email address" placeholder="confirm your email address" required ><br><br>
+            
+            <h2>Sex<span>*</span></h2>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male"></label>Male<br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br>
+            <input type="radio" id="other" name="gender" value="other"><input type="text" name="other" placeholder="other"><br><br>
+            <label for="other"></label><br>
+            
+            <h2>Birthday<span>*</span></h2>
+            <input type="date" id="date" name="date" placeholder="dd/mm/yyyy" required>
+            <label for="date"></label><br>
+            <p>Date</p>
+
+
+            <!-- <input type="button" onclick="formSubmit()" value="Send form data!"> -->
+            
+
+
+
+
+
+
+            
+            <h2>...s?<span>*</span></h2>
+            <textarea name="comment" cols="50" rows="5" form="userform" required></textarea>
+            <p>You can describe what makes you stand out in comparison to other candidates (skills, strengths, personality)</p><hr>
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
