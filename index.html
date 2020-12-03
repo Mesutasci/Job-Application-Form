@@ -3,70 +3,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Application Form</title>
-    <link rel="stylesheet" href="index.css">
-    
-    <script>
-        function formSubmit(){
-            document.forms["myForm"].submit();
-        }
-    </script>
-
+    <link rel="stylesheet" href="index.css"> 
 </head>
 
 <body>
-    <div id="AboutYou">
-        <h1>About You</h1>
+    
+    <div id="PData">
+
+        <h1>Personal Data</h1> 
+        <!-- Job application form will be changed to uppercase letters -->
         <h2>This is a Job application form. Please read and answer the questions carefully.</h2> 
         <hr>
-     
-        <h2>Your motivation: Why do you want to work with us?<span>*</span></h2>
-        <textarea name="comment" cols="50" rows="5" form="userform" required></textarea><hr>
-
-        <h2>Your strengths: Why should our firm select you? <span>*</span></h2>
-        <textarea name="comment" cols="50" rows="5" form="userform" required></textarea>
-        <p>You can describe what makes you stand out in comparison to other candidates (skills, strengths, personality)</p><hr>
-
-        <h2>Your personal achievements: What are you proud of? <span>*</span></h2>
-        <textarea name="comment" cols="50" rows="5" form="userform" required></textarea>
-        <p>Please tell us about any personal or professional achievement you're proud of, any project or volunteering you've completed, etc.</p><hr>
-
-        <h2>Your learning: How have you recently improved your skills? (language / digital / other) <span>*</span></h2>
-        <textarea name="comment" cols="50" rows="5" form="userform" required></textarea>
-        <p>Please add links to any personal / community project you worked on, any courses you completed, etc.</p><hr>
-
-        <h2>Do you have any experience or skills in IT? If yes, please list them here. <span>*</span></h2>
-        <textarea name="comment" cols="50" rows="5" form="userform" required></textarea>
-        <p>Previous IT knowledge is not a requirement. Please add links to any completed IT courses, any website you built, your IT portfolio / blog, etc.</p><hr>
-
-
-        <h2>Your efforts: Which barriers do you currently face to get a job in Switzerland? <span>*</span></h2>
-        <textarea name="comment" cols="50" rows="5" form="userform" required></textarea>
-        <p>Please describe what efforts (job applications, scholarships) you have recently made to get a job / education in Switzerland. What prevents you from being integrated successfully in the job market?</p><hr>
-
-        <h2>How do you rate your language skills?<span>*</span></h2>
-
-        <hr>
-
-
-
-
-        <h2>If you completed any language certificates (in English, German, French), please indicate the level (A1, A2, B1, B2, C1, C2, mother tongue) <span>*</span></h2>
-        <textarea name="comment" cols="50" rows="5" form="userform" required></textarea>
-        <p>You can describe what makes you stand out in comparison to other candidates (skills, strengths, personality)</p><hr>
-
-
-        <h2>Please upload your CV in PDF format<span>*</span></h2>
-
-        <p>You find a link to your CV guideliness on our website</p><hr>
-
-    </div>
-
-    <div id="Data">
-
-
-        <h1>Personal Data</h1>
-
-        <form action="/action_page.php" method="get"></form>
+        
+        <form>
             <h2>First Name<span>*</span></h2>
             <label for="fname"></label><br>
             <input type="text" id="fname" name="fname" placeholder="maksimum two names"><br><br>
@@ -74,12 +23,7 @@
             <h2>Last Name<span>*</span></h2>
             <label for="lname"></label><br>
             <input type="text" id="lname" name="lname"><br><br>
-            
-            <h2>Email address<span>*</span> </h2>
-            <label for="email"></label><br>
-            <input type="email" id="email" name="email address" required><br>
-            <input type="email" id="email" name="email address" placeholder="confirm your email address" required ><br><br>
-            
+                      
             <h2>Sex<span>*</span></h2>
             <input type="radio" id="male" name="gender" value="male">
             <label for="male"></label>Male<br>
@@ -91,22 +35,64 @@
             <h2>Birthday<span>*</span></h2>
             <input type="date" id="date" name="date" placeholder="dd/mm/yyyy" required>
             <label for="date"></label><br>
-            <p>Date</p>
-
-
-            <!-- <input type="button" onclick="formSubmit()" value="Send form data!"> -->
+            <p>Date</p>       
             
+            <h2>Name of the school you last graduated<span>*</span></h2>
+            <label for="school"></label><br>
+            <input type="text" id="school" name="school" placeholder="Name of the school..."><input type="text" id="field" name="school" placeholder="Field of Education..."><br><br>
+        </form>   
+    </div>
+    
+    <br><hr><br>
 
-
-
-
-
-
-            
-            <h2>...s?<span>*</span></h2>
+    <div id="PSkills">
+        <h1>Personal Skills</h1>
+        <form></form>
+            <h2>Your motivation: Why do you want to work with us?<span>*</span></h2>
             <textarea name="comment" cols="50" rows="5" form="userform" required></textarea>
-            <p>You can describe what makes you stand out in comparison to other candidates (skills, strengths, personality)</p><hr>
 
+            <h2>Personal achievements<span>*</span></h2>
+            <textarea name="comment" cols="50" rows="5" form="userform" required></textarea>
+            <p>Please tell us about any personal or professional achievement you're proud of, any project or volunteering you've completed, etc.</p>
+                    
+            <h2>Professional Experience<span>*</span></h2>
+            <textarea name="comment" cols="50" rows="5" form="userform" required></textarea>
+            <p>Please explain your professional experiences starting from the last one. Do not give detailed information.</p>
+
+            <h2>Knowlede and experience in office programs<span>*</span></h2>
+            <textarea name="comment" cols="50" rows="5" form="userform" required></textarea>
+            <p>What kinds of office programs can you use? Do you have any other IT experince?</p>
+           
+            <h2>Please indicate the language(s) you know and their levels<span>*</span></h2>
+            <textarea name="comment" cols="50" rows="5" form="userform" required></textarea>
+
+            <h2>Please upload your CV in PDF format<span>*</span></h2>
+            <label for="CV"></label><br>
+            <input type="file" id="CV" name="CV" placeholder="maksimum two names"><br><br>
+            <p>If you don't have a CV form, you can fill out a new one on our website.</p>
+        </form>
+    </div>
+
+    <br><hr><br>
+
+    <div class="Contacts">
+        <h1>Contact Information</h1>
+        <form action="/action_page.php" method="get"></form>
+            <h2>Email address<span>*</span> </h2>
+            <label for="email"></label><br>
+            <input type="email" id="email" name="email address" placeholder="email address" required><br>
+            <input type="email" id="email" name="email address" placeholder="email address confirmation" required><br><br>
+
+            <h2>Telephone Number</h2>
+            <label for="phone"></label><br>
+            <input type="tel" id="phone" name="phone" placeholder="12-345-67-89" pattern="[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}" required><br>
+            <small>Format: 12-345-67-89</small><br><br>
+
+            <h2>Address<span>*</span></h2>
+            <textarea name="comment" cols="50" rows="5" form="userform" placeholder="Please type your correspondence address" required></textarea>
+            <label for="fname"></label><br>
+            Country: <input type="text" id="country" name="country" placeholder="Country of residence..."><br><br>
+        </form>
     </div>
 
     <script src="index.js"></script>
