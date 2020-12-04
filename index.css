@@ -1,0 +1,54 @@
+body {
+    background-color: rgba(208, 216, 243, 0.87);
+    color: midnightblue;
+}
+
+div {
+    display: block;
+    background-color: whitesmoke;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 36px;
+    padding-top: 24px;
+    align-content: left;
+    }
+
+#banner {
+    background-image: url("ApplicationForEmployment.jpg");
+    width: 60%;
+    height: 50%;
+    margin-top: 0px;
+
+}
+
+img {
+    width: 20%;
+    height: auto;
+    
+}
+
+h1 {
+    padding: 24px;
+    padding-left: 0px;
+    color: midnightblue;
+    font-size: 3em;
+}
+
+h2 {
+    padding-top: 24px;
+    padding-bottom: 0px;
+    font-size: 24px;
+}
+
+p {
+    font-size: 18px;
+    padding-bottom: 24px;
+    margin-top: 6px;
+}
+
+span {
+    color: red;
+}

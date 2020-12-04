@@ -8,12 +8,13 @@
 
 <body>
     
+    <div id="banner">
+        <img src="logo.png" alt="logo">
+    </div>
+    
     <div id="PData">
 
-        <h1>Personal Data</h1> 
-        <!-- Job application form will be changed to uppercase letters -->
-        <h2>This is a Job application form. Please read and answer the questions carefully.</h2> 
-        <hr>
+        <h1>Personal Data</h1><hr>        
         
         <form>
             <h2>First Name<span>*</span></h2>
@@ -43,15 +44,13 @@
         </form>   
     </div>
     
-    <br><hr><br>
-
     <div id="PSkills">
-        <h1>Personal Skills</h1>
+        <h1>Personal Skills</h1><hr>
         <form></form>
-            <h2>Your motivation: Why do you want to work with us?<span>*</span></h2>
+            <h2>Your motivation: Why do you want to work with us?</h2>
             <textarea name="comment" cols="50" rows="5" form="userform" required></textarea>
 
-            <h2>Personal achievements<span>*</span></h2>
+            <h2>Personal achievements</h2>
             <textarea name="comment" cols="50" rows="5" form="userform" required></textarea>
             <p>Please tell us about any personal or professional achievement you're proud of, any project or volunteering you've completed, etc.</p>
                     
@@ -59,31 +58,29 @@
             <textarea name="comment" cols="50" rows="5" form="userform" required></textarea>
             <p>Please explain your professional experiences starting from the last one. Do not give detailed information.</p>
 
-            <h2>Knowlede and experience in office programs<span>*</span></h2>
+            <h2>Knowlede and experience in office programs</h2>
             <textarea name="comment" cols="50" rows="5" form="userform" required></textarea>
             <p>What kinds of office programs can you use? Do you have any other IT experince?</p>
            
-            <h2>Please indicate the language(s) you know and their levels<span>*</span></h2>
+            <h2>Please indicate the language(s) you know and their levels</h2>
             <textarea name="comment" cols="50" rows="5" form="userform" required></textarea>
 
-            <h2>Please upload your CV in PDF format<span>*</span></h2>
+            <h2>Please upload your CV in PDF format</h2>
             <label for="CV"></label><br>
             <input type="file" id="CV" name="CV" placeholder="maksimum two names"><br><br>
             <p>If you don't have a CV form, you can fill out a new one on our website.</p>
         </form>
     </div>
 
-    <br><hr><br>
-
     <div class="Contacts">
-        <h1>Contact Information</h1>
+        <h1>Contact Information</h1><hr>
         <form action="/action_page.php" method="get"></form>
             <h2>Email address<span>*</span> </h2>
             <label for="email"></label><br>
             <input type="email" id="email" name="email address" placeholder="email address" required><br>
             <input type="email" id="email" name="email address" placeholder="email address confirmation" required><br><br>
 
-            <h2>Telephone Number</h2>
+            <h2>Telephone Number<span>*</span></h2>
             <label for="phone"></label><br>
             <input type="tel" id="phone" name="phone" placeholder="12-345-67-89" pattern="[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}" required><br>
             <small>Format: 12-345-67-89</small><br><br>
@@ -92,9 +89,11 @@
             <textarea name="comment" cols="50" rows="5" form="userform" placeholder="Please type your correspondence address" required></textarea>
             <label for="fname"></label><br>
             Country: <input type="text" id="country" name="country" placeholder="Country of residence..."><br><br>
-        </form>
+        </form><hr>
+        <p>Note: Please read and answer the questions carefully! Once you submit your form, you can not make any changes.</p>
     </div>
 
+    
     <script src="index.js"></script>
 </body>
 </html>
