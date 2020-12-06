@@ -4,29 +4,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Application Form</title>
     <link rel="stylesheet" href="index.css"> 
+
+    <script>
+        function check_info(){
+            // var fname = document.getElementById("fname").value;
+            // var lname = document.getElementById("lname").value;
+            // var other = document.getElementById("other").value;
+            var schoolname = document.getElementById("schoolname").value;
+            var fieldname = document.getElementById("fieldname").value;
+            var pExperience = document.getElementsById("pExperience").value;
+            var address = document.getElementsById("address").value;
+        
+            // if(fname==="" || lname==="" || other==="" || schoolname=="" || fieldname==="" || experience==="" || address===""){
+            if(schoolname=="" || fieldname==="" || experience==="" || address===""){
+                alert('Please fill all required fields!');
+                document.getElementById("schoolname").style.background = "red";
+                document.getElementById("fieldname").style.background = "red";
+                document.getElementById("pExperience").style.background = "red";
+                document.getElementById("address").style.background = "red";
+                return false;
+            }
+        }
+    </script> 
+
 </head>
 
 <body>
-    
+    <!--div for logo -->
     <div id="banner">
         <img id="logo" src="logo.png" alt="logo">
     </div>
     
+    <!-- div for Personal Data -->
     <div id="PData">
-
-        <h1>Personal Data</h1><hr>        
-        
-        <form>
+             
+        <form action="submission.html" method="post" onsubmit="return check_info();">
+            <h1>Personal Data</h1><hr>        
             <h2>First Name<span>*</span></h2>
             <label for="fname"></label><br>
-            <input type="text" id="fname" name="fname" placeholder="maksimum two names"><br><br>
+            <input type="text" id="fname" name="fname" placeholder="maksimum two names" required><br><br>
             
             <h2>Last Name<span>*</span></h2>
             <label for="lname"></label><br>
-            <input type="text" id="lname" name="lname"><br><br>
+            <input type="text" id="lname" name="lname" required><br><br>
                       
             <h2>Sex<span>*</span></h2>
-            <input type="radio" id="male" name="gender" value="male">
+            <input type="radio" id="male" name="gender" value="male" required>
             <label for="male"></label>Male<br>
             <input type="radio" id="female" name="gender" value="female">
             <label for="female">Female</label><br>
@@ -40,44 +63,36 @@
             <h2>Name of the school you last graduated<span>*</span></h2>
             <label for="school"></label><br>
             <div class="school">
-                <input type="text" id="schoolname" name="school" placeholder="Name of the school...">
-                <input type="text" id="fieldname" name="school" placeholder="Field of Education...">
+                <input type="text" id="schoolname" name="school" placeholder="Name of the school..." required>
+                <input type="text" id="fieldname" name="school" placeholder="Field of Education..." required>
             </div>
             <br><br>
-        </form>   
-    </div>
-    
-    <div id="PSkills">
-        <h1>Personal Skills</h1><hr>
-        <form></form>
+
+            <hr><h1>Personal Skills</h1><hr>
             <h2>Your motivation: Why do you want to work with us?</h2>
             <textarea name="comment" cols="50" rows="5" form="userform" required></textarea>
 
             <h2>Personal achievements</h2>
-            <textarea name="comment" cols="50" rows="5" form="userform" required></textarea>
+            <textarea name="comment" cols="50" rows="5" form="userform" ></textarea>
             <p>Please tell us about any personal or professional achievement you're proud of, any project or volunteering you've completed, etc.</p>
                     
             <h2>Professional Experience<span>*</span></h2>
-            <textarea name="comment" cols="50" rows="5" form="userform" required></textarea>
+            <textarea name="comment" id="pExperience" cols="50" rows="5" form="userform" required></textarea>
             <p>Please explain your professional experiences starting from the last one. Do not give detailed information.</p>
 
             <h2>Knowlede and experience in office programs</h2>
-            <textarea name="comment" cols="50" rows="5" form="userform" required></textarea>
+            <textarea name="comment" cols="50" rows="5" form="userform" ></textarea>
             <p>What kinds of office programs can you use? Do you have any other IT experince?</p>
            
             <h2>Please indicate the language(s) you know and their levels</h2>
-            <textarea name="comment" cols="50" rows="5" form="userform" required></textarea>
+            <textarea name="comment" cols="50" rows="5" form="userform"></textarea>
 
             <h2>Please upload your CV in PDF format</h2>
             <label for="CV"></label><br>
             <input type="file" id="CV" name="CV" placeholder="maksimum two names"><br><br>
             <p>If you don't have a CV form, you can fill out a new one on our website.</p>
-        </form>
-    </div>
-
-    <div class="Contacts">
-        <h1>Contact Information</h1><hr>
-        <form action="/action_page.php" method="get"></form>
+      
+            <hr><h1>Contact Information</h1><hr>
             <h2>Email address<span>*</span> </h2>
             <label for="email"></label><br>
             <input type="email" id="email" name="email address" placeholder="email address" required><br><br>            
@@ -90,9 +105,9 @@
             <small>Format: 12-345-67-89</small><br><br>
 
             <h2>Address<span>*</span></h2>
-            <textarea name="comment" cols="50" rows="5" form="userform" placeholder="Please type your correspondence address" required></textarea><br><br>
+            <textarea name="comment" id="address" cols="50" rows="5" form="userform" required placeholder="Please type your correspondence address" ></textarea><br><br>
             <label for="fname"></label><small>Country: </small><br>
-            <select id="country" name="country" placeholder="Country of residence...">
+            <select id="country" name="country" placeholder="Country of residence..." required>
                 <option value="Switzerland">Switzerland</option>
                 <option value="USA">USA</option>
                 <option value="Germany">Germany</option>
@@ -102,12 +117,14 @@
                 <option value="India">India</option>
                 <option value="Canada">Canada</option>
                 <option value="New Zeland">New Zeland</option>
-            </select>             
+            </select>   
+            <br><br>   
+            <input type="submit" id="submit" value="Submit the Form">       
         </form><br><br><hr>
         <p>Note: Please read and answer the questions carefully! Once you submit your form, you can not make any changes.</p>
     </div>
 
-    
     <script src="index.js"></script>
+
 </body>
 </html>
