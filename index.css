@@ -50,7 +50,7 @@ p {
 }
 
 /* coloring the asterics (*) figure */
-span {
+.ast {
     color: red;
 }
 
@@ -65,24 +65,15 @@ span {
     border: none;
     }
 
-/* styling the contents of .school div in the form */
-#fieldname, #schoolname {
-    width: 90%;
-    margin-left: none;
-    padding: 14px 20px;
-    border: 1px solid darkblue;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 18px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    }
 
 /* common properties of some tags, classes and ids */
 textarea,
 select, 
+#username,
 #fname, 
 #lname, 
-#email, 
+#email1,
+#email2, 
 #date, 
 #phone,
 #fieldname,
@@ -99,11 +90,11 @@ select,
 
 /* editing the width of the tag different from common properties */
 textarea{
-    width: 100%;
+    width: 50%;
 }
 
 /* styling the file upload button */
-#CV, #submit{
+#CV{
     width: 30%;
     margin-top: 6px;
     padding: 14px 20px;
@@ -115,7 +106,6 @@ textarea{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-/* style all elements with a required attribute */
-/* :required {
-    border: 2px solid red;
-  } */
+#Warning{
+    color: indianred;
+}
