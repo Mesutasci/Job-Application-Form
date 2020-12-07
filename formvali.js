@@ -79,8 +79,7 @@ function checkArea(){
 function check_phone(){
     var phoneNum = document.getElementById("phone").value;
     var lenNum = phoneNum.toString().length
-    
-    
+        
     if (phoneNum === ""){
         alert("Please enter your phone number");
     }
