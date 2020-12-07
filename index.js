@@ -1,5 +1,0 @@
-function check_info()
-
-
-           
- 
