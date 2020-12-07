@@ -1,10 +1,10 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Application Form</title>
     <link rel="stylesheet" type="text/css" href="index.css"> 
-    
 </head>
 
 <body>
@@ -17,12 +17,17 @@
     <div id="PData">
              
         <form action="#" method="post">
-                <h1>User Information</h1><hr>
-                <h2>User Name<span class="ast">*</span></h2>
-                <label for="username"></label><br>
-                <input type="text" id="username" name="username" pattern="[a-zA-Z0-9]{2,15}$" placeholder="Write your first name" onblur="usernameCheck()"required><span id="usernameNote"></span><br>
+                <h1>Personal Data</h1><hr>
+                <h2>First Name<span class="ast">*</span></h2>
+                <label for="fname"></label><br>
+                <input type="text" id="fname" name="fname" pattern="[a-zA-Z0-9\s]{2,15}$" placeholder="Write your first name" onblur="fnameCheck()"required><span id="fnameNote"></span><br>
                 <small>(Characters 2-15)</small>
 
+                <h2>Last Name<span class="ast">*</span></h2>
+                <label for="lname"></label><br>
+                <input type="text" id="lname" name="lname" pattern="[a-zA-Z0-9\z]{2,15}$" placeholder="Write your last name" onblur="lnameCheck()"required><span id="lnameNote"></span><br>
+                <small>(Characters 2-15)</small>
+                
                 <h2>Email address<span class="ast">*</span> </h2>
                 <label for="email1"></label><br>
                 <input type="email" id="email1" name="email address1" placeholder="Write your email address" onblur="emailCheck()" required><span id="emailNote"></span><br><br>      
@@ -31,12 +36,7 @@
                 <label for="email2"></label><br>
                 <input type="email" id="email2" name="email address2" placeholder="Re-write your email address" onblur="emailConfirm()" required><span id="confirmationNote"></span><br>
                 
-                <h1>Personal Data</h1><hr>        
-                <h2>Firstname, Lastname<span class="ast">*</span></h2>
-                <label for="fname"></label><br>
-                <input type="text" id="fname" name="fname" pattern="[a-zA-Z_\s]{4,}$" placeholder="Firstname Lastname" onblur="fnameCheck()"required><span id="fnameNote"></span><br>
-                <small>(Min. 4 charachers)</small>
-                     
+                                
                 <h2>Sex<span class="ast">*</span></h2>
                 <input type="radio" id="male" name="gender" value="male" required>
                 <label for="male"></label>Male<br>
@@ -76,13 +76,23 @@
                 </select>   
                 <br><br>  
                 
+                <h1>Professional Skills</h1><hr>
                 <h2>Professional Experience<span class="ast">*</span></h2>
-                <label for="experience"></label>
-                <textarea id="experience" name="comment" cols="50" rows="5" form="userform"  onclick="checkArea()" placeholder="Please type your correspondence address" required></textarea><span id="note5"></span><br>
+                <label for="explanation"></label>
+                <textarea id="explanation" name="comment" cols="50" rows="5" form="userform"  onclick="checkArea()" placeholder="Please explain your current and previous work places and your asigments..." required></textarea><span id="note5"></span><br>
 
-                <h2>You can upload your CV in PDF format</h2>
+                <h2>Language Skills<span class="ast">*</span></h2>
+                <label for="explanation"></label>
+                <textarea id="explanation" name="comment" cols="50" rows="5" form="userform"  onclick="checkArea()" placeholder="Please your explain your language skills and certificates etc..." required></textarea><span id="note5"></span><br>
+
+                <h2>Education<span class="ast">*</span></h2>
+                <label for="explanation"></label>
+                <textarea id="explanation" name="comment" cols="50" rows="5" form="userform"  onclick="checkArea()" placeholder="Please explain your education degrees, schools and branches..." required></textarea><span id="note5"></span><br>
+
+
+                <h2>You can upload your CV in PDF format<span class="ast">*</span></h2>
                 <label for="CV"></label><br>
-                <input type="file" id="CV" name="CV" placeholder="maksimum two names" onblur="check_info6()"><br><br>
+                <input type="file" id="CV" name="CV" placeholder="maksimum two names" required><br><br>
 
             <!-- <input type="submit" id="submit" value="Submit the Form">        -->
         </form><br><br><hr>
